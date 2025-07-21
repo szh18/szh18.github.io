@@ -1,8 +1,14 @@
 
 // https://vitepress.dev/reference/site-config
+import { defineConfig } from "vitepress";
+import { defineTeekConfig } from "vitepress-theme-teek/config";
+
+// Teek 主题配置
+const teekConfig = defineTeekConfig({});
 export default defineConfig({
   title: "My Blog",
   description: "个人博客",
+  extends: teekConfig,
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -32,14 +38,6 @@ export default defineConfig({
   }
 })
 
-import { defineTeekConfig } from "vitepress-theme-teek/config";
 
-// Teek 主题配置
-const teekConfig = defineTeekConfig({});
-
-// VitePress 配置
-export default defineConfig({
-  extends: teekConfig,
-});
 
 
